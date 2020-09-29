@@ -23,7 +23,8 @@ const MONGODB_URI = process.env.API_KEY;
 
 // Step 2
 mongoose.connect( MONGODB_URI || 'mongodb://localhost/my_database', {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 mongoose.connection.on('connected', () => {
